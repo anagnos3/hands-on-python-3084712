@@ -28,7 +28,11 @@ with open("laureates.csv", "r") as f:
 
 laureates_beginning_with_a = []
 # LinkedIn learner code here
-
+#laureates_beginning_with_a = list(filter(lambda laureate: (laureate["name"][0] == 'a'), laureates))
+laureates_beginning_with_a = [laureate for laureate in laureates if laureate["name"][0].lower() == 'a']
+#for laureate in laureates:
+#    if laureate["name"][0].lower() == 'a':
+#        laureates_beginning_with_a.append(laureate)
 
 with open("laureates.json", "w") as f:
     json.dump(laureates_beginning_with_a, f, indent=2)

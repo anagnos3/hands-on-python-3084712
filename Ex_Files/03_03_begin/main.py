@@ -2,7 +2,7 @@ import csv
 import json
 from pprint import pprint
 
-EINSTEIN = {
+EINSTEIN = { #python dictionary
     "birthplace": "Germany",
     "name": "Albert",
     "surname": "Einstein",
